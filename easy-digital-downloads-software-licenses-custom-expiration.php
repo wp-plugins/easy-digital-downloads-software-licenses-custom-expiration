@@ -2,14 +2,14 @@
 /**
 * Plugin Name: Easy Digital Downloads - Software Licenses - Custom Expiration
 * Plugin URI: http://www.wpcube.co.uk/plugins/edd-software-licenses-custom-expiration
-* Version: 1.0
+* Version: 1.0.1
 * Author: WP Cube
 * Author URI: http://www.wpcube.co.uk
 * Description: Define a different license expiration for downloads assigned to a specific Bundle. Requires the <a href="https://easydigitaldownloads.com/extensions/software-licensing/">EDD Software Licensing Addon</a>
 * License: GPL2
 */
 
-/*  Copyright 2013 WP Cube (email : support@wpcube.co.uk)
+/*  Copyright 2015 WP Cube (email : support@wpcube.co.uk)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -38,7 +38,7 @@ class EDDSLCE {
     /**
     * Constructor.
     */
-    function EDDSLCE() {
+    function __construct() {
         // Plugin Details
         $this->plugin = new stdClass;
         $this->plugin->name = 'easy-digital-downloads-software-licenses-custom-expiration'; // Plugin Folder
@@ -107,6 +107,9 @@ class EDDSLCE {
     */
     function save($postID) {
     	// Check Post Type = EDD Download
+        if ( ! isset( $_POST['post_type'] ) ) {
+            return;
+        }
     	if ($_POST['post_type'] != 'download') {
 	    	return;
     	}
