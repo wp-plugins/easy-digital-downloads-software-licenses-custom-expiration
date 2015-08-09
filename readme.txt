@@ -1,7 +1,7 @@
 === Easy Digital Downloads: Software Licensing: Custom Expiration ===
 Contributors: n7studios,wpcube
 Donate link: http://www.wpcube.co.uk/plugins/edd-software-licensing-custom-expiration
-Tags: wpcube, framework
+Tags: edd,easy digital downloads,software licensing,licensing,expiration,custom expiration
 Requires at least: 3.8
 Tested up to: 4.3
 Stable tag: trunk
