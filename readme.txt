@@ -3,8 +3,8 @@ Contributors: n7studios,wpcube
 Donate link: http://www.wpcube.co.uk/plugins/edd-software-licensing-custom-expiration
 Tags: wpcube, framework
 Requires at least: 3.8
-Tested up to: 4.2
-Stable tag: 1.0
+Tested up to: 4.3
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,13 +27,6 @@ the Easy Digital Downloads: Software Licensing addon.
 
 = Support =
 
-*Premium Plugins*
-
-For many of our plugins on wordpress.org, Premium versions are available. These typically provide additional functionality,
-and come with one to one email support.
-
-*Free Plugins*
-
 We will do our best to provide support through the WordPress forums. However, please understand that this is a free plugin, 
 so support will be limited. Please read this article on <a href="http://www.wpbeginner.com/beginners-guide/how-to-properly-ask-for-wordpress-support-and-get-it/">how to properly ask for WordPress support and get it</a>.
 
@@ -41,12 +34,7 @@ so support will be limited. Please read this article on <a href="http://www.wpbe
 We produce free and premium WordPress Plugins that supercharge your site, by increasing user engagement, boost site visitor numbers
 and keep your WordPress web sites secure.
 
-Find out more about us:
-
-* <a href="http://www.wpcube.co.uk">Our Plugins</a>
-* <a href="http://www.facebook.com/wpcube">Facebook</a>
-* <a href="http://twitter.com/wp_cube">Twitter</a>
-* <a href="https://plus.google.com/b/110192203343779769233/110192203343779769233/posts?rel=author">Google+</a>
+Find out more about us at <a href="http://www.wpcube.co.uk" rel="friend" title="Premium WordPress Plugins">wpcube.co.uk</a>
 
 == Installation ==
 
@@ -63,6 +51,10 @@ Find out more about us:
 1. Options when configuring a Bundle
 
 == Changelog ==
+
+= 1.0.2 =
+* Tested with WordPress 4.3
+* Fix: plugin_dir_path() and plugin_dir_url() used for Multisite / symlink support
 
 = 1.0.1 =
 * Fix: Undefined index notice when creating a new Custom Post Type

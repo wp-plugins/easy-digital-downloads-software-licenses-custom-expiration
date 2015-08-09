@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Easy Digital Downloads - Software Licenses - Custom Expiration
 * Plugin URI: http://www.wpcube.co.uk/plugins/edd-software-licenses-custom-expiration
-* Version: 1.0.1
+* Version: 1.0.2
 * Author: WP Cube
 * Author URI: http://www.wpcube.co.uk
 * Description: Define a different license expiration for downloads assigned to a specific Bundle. Requires the <a href="https://easydigitaldownloads.com/extensions/software-licensing/">EDD Software Licensing Addon</a>
@@ -31,7 +31,7 @@
 * @package WP Cube
 * @subpackage Framework
 * @author Tim Carr
-* @version 1.0
+* @version 1.0.2
 * @copyright WP Cube
 */
 class EDDSLCE {
@@ -39,14 +39,15 @@ class EDDSLCE {
     * Constructor.
     */
     function __construct() {
+
         // Plugin Details
-        $this->plugin = new stdClass;
-        $this->plugin->name = 'easy-digital-downloads-software-licenses-custom-expiration'; // Plugin Folder
-        $this->plugin->displayName = 'Custom Expiration'; // Plugin Name
-        $this->plugin->version = '1.0';
-        $this->plugin->folder = WP_PLUGIN_DIR.'/'.$this->plugin->name; // Full Path to Plugin Folder
-        $this->plugin->url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
-        
+        $this->plugin               = new stdClass;
+        $this->plugin->name         = 'easy-digital-downloads-software-licenses-custom-expiration'; // Plugin Folder
+        $this->plugin->displayName  = 'Custom Expiration'; // Plugin Name
+        $this->plugin->version      = '1.0.2';
+        $this->plugin->folder       = plugin_dir_path( __FILE__ );
+        $this->plugin->url          = plugin_dir_url( __FILE__ );
+
         // Dashboard Submodule
         if (!class_exists('WPCubeDashboardWidget')) {
 			require_once($this->plugin->folder.'/_modules/dashboard/dashboard.php');
